@@ -6,8 +6,9 @@ export function DegreeDial({
   caption,
 }: {
   degree: number | null;
-  caption?: string;
+  caption?: string | undefined;
 }) {
+
   const quality = degree === null ? null : qualityFor(degree);
   const toneClass =
     quality?.tone === "good"
